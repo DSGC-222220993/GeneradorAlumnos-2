@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+
+
+
+    const apellidos = ['González', 'Rodríguez', 'Gómez', 'Fernández', 'López', 'Díaz', 'Martínez', 'Pérez', 'García', 'Sánchez',
+    'Romero', 'Sosa', 'Torres', 'Álvarez', 'Ramírez', 'Suárez', 'Rivera', 'Rojas', 'Morales', 'Flores',
+    'Molina', 'Ortiz', 'Delgado', 'Castro', 'Ortega', 'Herrera', 'Ruiz', 'Jimeénez', 'Navarro', 'Vargas',
+    'Benítez', 'Medina', 'Aguilar', 'Núñez', 'Cabrera', 'Reyes', 'Peralta', 'Guerrero', 'Montero', 'León',
+    'Castillo', 'Santiago', 'Dominguez', 'Mendoza', 'Giménez', 'Fuentes', 'Cruz', 'Ávila', 'Ramos', 'Iglesias',
+    'Salazar', 'Moreno', 'Domínguez', 'Martiín', 'Silva', 'Roldán', 'Cortés', 'Paz', 'Peña', 'Salas', 'Arias',
+    'Vega', 'Hernández', 'Gutiérrez', 'Pinto', 'Figueroa', 'Salgado', 'Mendez', 'Bravo', 'Barrios', 'Acosta',
+    'Miranda', 'Lara', 'Pacheco', 'Espinosa', 'Ochoa', 'Carrillo', 'Calderón', 'Ferrer', 'Mercado', 'Aguirre',
+    'Bernal', 'Del Valle', 'Ponce', 'Tovar', 'Valencia', 'Escobar', 'Valenzuela', 'Luna', 'Villa', 'Cruz',
+    'Calvo', 'Castañeda', 'Quintero', 'Zamora', 'Montes', 'Osorio', 'Blanco', 'Salinas', 'Cardenas', 'Paz',
+    'Guerra', 'Bustamante', 'Estrada', 'Santana', 'Valle', 'Bonilla', 'Campos', 'Costa', 'Pardo', 'Villar',
+    'Gallardo', 'Olivares', 'Moya', 'Correa', 'Alonso', 'Peñaloza', 'Rubio', 'Córdoba', 'Serrano', 'Garrido',
+    'Méndez', 'Ríos', 'Arroyo', 'Peñuela', 'Segura', 'Bravo', 'Herrera', 'Dávila', 'Fierro', 'Bañuelos', 'Baeza',
+    'Zúñiga', 'Zambrano', 'Chávez', 'Guzmán', 'Maldonado', 'Carrasco', 'Guillén', 'Aranda', 'Téllez', 'Santos',
+    'Landa', 'Esquivel', 'Quintero', 'Herrero', 'Alvarado', 'Olivas', 'Espinoza', 'Toledo', 'Agüero', 'Arce',
+    'Lázaro', 'Palacios', 'Leyva', 'Padilla', 'Arellano', 'Munguía', 'Duarte', 'Rico', 'Uribe', 'Rubio', 'Aguado',
+    'Galindo', 'Beltrán', 'Rocha', 'Cárdenas', 'Pizarro', 'Carvajal', 'Mata', 'Lucero', 'Vásquez', 'Terán',
+    'Valero', 'Amador', 'Montenegro', 'Palma', 'Ferrer', 'Osuna', 'Mendoza', 'Medina', 'Escudero', 'Nieves',
+    'Bolaños', 'Sepúlveda', 'Crespo', 'Rico', 'Fierro', 'Gavilán', 'Ordoñez', 'Hidalgo', 'Osorio', 'Bueno',
+    'Figueroa', 'Casas', 'Padrón', 'Loyola', 'Campa', 'Carrillo', 'Gudiño', 'Corral', 'Salamanca', 'Dávila',
+    'Noriega', 'Echeverría', 'Maldonado', 'Escalante', 'Toro', 'Villanueva', 'Rosales', 'Armas', 'Grajales',
+    'Castañeda', 'Mancilla', 'Ramos', 'Arévalo', 'Suazo', 'Del Río', 'Garcilazo', 'Orduña', 'Zarate', 'Barajas'
+  ];
+
+    const apellidosPortugueses = [
+      "Silva", "Santos", "Pereira", "Fernandes", "Martins",
+      "Rodrigues", "Sousa", "Gomes", "Lopes", "Marques",
+      "Alves", "Ferreira", "Costa", "Oliveira", "Pinto",
+      "Carvalho", "Teixeira", "Moreira", "Mendes", "Nunes",
+      "Ribeiro", "Cruz", "Machado", "Neves", "Correia",
+      "Dias", "Reis", "Lima", "Barbosa", "Antunes",
+      "Mota", "Coelho", "Vieira", "Jesus", "Gonçalves",
+      "Almeida", "Cardoso", "Ramos", "Borges", "Esteves",
+      "Fonseca", "Araújo", "Figueiredo", "Freitas", "Guerra",
+      "Pires", "Simões", "Tavares", "Vargas", "Xavier",
+      "Azevedo", "Cunha", "Duarte", "Faria", "Garcia",
+      "Lourenço", "Macedo", "Nogueira", "Oliveira", "Quaresma",
+      "Rocha", "Sampaio", "Trindade", "Valente", "Zambrano",
+      "Andrade", "Baptista", "Castro", "Dantas", "Estrada",
+      "Feliciano", "Gil", "Horta", "Inácio", "Jardim",
+      "Leite", "Magalhães", "Nóbrega", "Ortega", "Pedroso",
+      "Queirós", "Rangel", "Santana", "Tomás", "Urbano",
+      "Vasconcelos", "Wagner", "Ximenes", "Yanes", "Zarco",
+      "Abreu", "Bessa", "Camacho", "Diniz", "Eanes",
+      "Furtado", "Gouveia", "Hernandez", "Índio", "Joaquim",
+      "Keller", "Lira", "Monteiro", "Nascimento", "Osório",
+      "Pacheco", "Queiroz", "Ramalho", "Serra", "Teles",
+      "Uchoa", "Villanova", "Wanderley", "Xisto", "Yasuda",
+      "Zaragoza", "Albuquerque", "Braga", "Carmo", "Dourado",
+      "Esteves", "Fraga", "Gusmão", "Holanda", "Iglesias",
+      "Jesus", "Klein", "Lobo", "Mendonça", "Nobre",
+      "Otero", "Peixoto", "Quintana", "Rocha", "Siqueira",
+      "Travassos", "Ulrich", "Vargas", "Watanabe", "Xavier",
+      "Yamamoto", "Zanetti", "Alcântara", "Brito", "Cordeiro",
+      "Diniz", "Elias", "Fonseca", "Garrido", "Henrique",
+      "Ibrahim", "Jardim", "Kato", "Luna", "Moraes",
+      "Nascimento", "Oliveira", "Pires", "Queirós", "Rosa",
+      "Santos", "Teixeira", "Uchoa", "Vieira", "Xavier",
+      "Yamada", "Zambrano", "Kwame", "Nkrumah", "Osei", "Acheampong", "Sankara",
+      "Mandela", "Zuma", "Ghana", "Abiola", "Mugabe",
+      "Kenya", "Odinga", "Soweto", "Toure", "Mali",
+      "Azikiwe", "Kagame", "Zik", "Nyerere", "Selassie",
+      "Tutu", "Biko", "Madiba", "Rwanda", "Kenyatta",
+      "Sobukwe", "Haile", "Zewde", "Lumumba", "Garvey",
+      "Odinga", "Kabila", "Nkrumah", "Machel", "Nujoma",
+      "Boateng", "Kofi", "Azania", "Tambo", "Lagos",
+      "Lomé", "Ouattara", "Bamba", "Dos Santos", "Nguema",
+      "Koulibaly", "Diallo", "Keita", "Mensah", "Jallow",
+      "Sylla", "Diop", "Traoré", "Dlamini", "Moyo",
+      "Nkosi", "Chukwu", "Obi", "Okafor", "Okeke",
+      "Chinonso", "Onyeka", "Osei", "Amoah", "Asante",
+      "Djibril", "Kante", "Kouyaté", "Sissoko", "Diawara"
+    ];
+
+      const primerNombre = [
+        "Emma", "Liam", "Olivia", "Noah", "Ava",
+        "Isabella", "Sophia", "Jackson", "Lucas", "Aiden",
+        "Mia", "Harper", "Evelyn", "Abigail", "Amelia",
+        "Ethan", "Michael", "Alexander", "Benjamin", "James",
+        "William", "Elijah", "Daniel", "Matthew", "Henry",
+        "Charlotte", "Amelia", "Aria", "Scarlett", "Grace",
+        "Chloe", "Avery", "Ella", "Riley", "Lily",
+        "Jack", "Logan", "Lucas", "Carter", "Jayden",
+        "Ella", "Mila", "Madison", "Luna", "Aubrey",
+        "Peyton", "Sofia", "Evelyn", "Aurora", "Isabel",
+        "Liam", "Olivia", "Emma", "Ava", "Sophia",
+        "Jackson", "Elijah", "Mia", "Aiden", "Lucas",
+        "Amelia", "Caden", "Harper", "Evelyn", "Lily",
+        "Mason", "Ella", "Oliver", "Aria", "Grace",
+        "Logan", "Scarlett", "Avery", "Riley", "Chloe",
+        "Daniel", "Sofia", "Mila", "Madison", "Luna",
+        "Isabella", "Aurora", "Zoe", "Penelope", "Abigail",
+        "Benjamin", "Henry", "Mia", "Ella", "Ava",
+        "Noah", "Olivia", "Liam", "Emma", "Sophia",
+        "Jackson", "Lucas", "Aiden", "Evelyn", "Avery",
+        "Grace", "Chloe", "Harper", "Ella", "Mia", "Alejandra", "Javier", "Sofía", "Miguel", "Valentina",
+        "Diego", "Camila", "José", "Ana", "Carlos",
+        "Isabella", "Fernando", "Adriana", "Juan", "Valeria",
+        "Andrés", "Paola", "Mateo", "Gabriela", "Daniel",
+        "Renata", "Pablo", "María", "Emiliano", "Regina",
+        "Guillermo", "Laura", "Ricardo", "Diana", "Héctor",
+        "Ximena", "Eduardo", "Liliana", "Rodrigo", "Victoria",
+        "Fabiola", "Jorge", "Verónica", "Fernanda", "Raúl",
+        "Montserrat", "Hugo", "Elena", "Julián", "Rosa",
+        "Luis", "Cecilia", "Manuel", "Alejandra", "Rafael",
+        "Julia", "Mauricio", "Mariana", "Arturo", "Natalia",
+        "Francisco", "Lucía", "Mario", "Leticia", "Oscar",
+        "Ana Paula", "Ángel", "Elizabeth", "Raul", "Dulce",
+        "Santiago", "Gabriel", "Luisa", "Rubén", "Gloria",
+        "Dante", "Karla", "Axel", "Patricia", "Elena",
+        "Josué", "Irma", "Emilia", "Gustavo", "Sara",
+        "Eva", "Jaime", "Lorena", "Cristina", "Joaquín",
+        "Vanessa", "Salvador", "Estela", "Jasmine", "Alex",
+        "Alma", "Alejandro", "Edith", "León", "Mónica",
+        "Antonio", "Alondra", "Rogelio", "Brenda", "Carmen",
+        "Rubí", "Ismael", "Ana Karen", "Martín", "Rocio",
+        "Nancy", "Jesús", "Alicia", "Ricardo", "Isabel"
+
+      ];
+
+      const segundoNombre = ['Sakura', 'Yuki', 'Haru', 'Aiko', 'Hana', 'Naomi', 'Kenji', 'Akira', 'Rina', 'Hiroshi',
+      'Emi', 'Kaito', 'Sora', 'Miyuki', 'Yuna', 'Haruki', 'Kiko', 'Takashi', 'Riko', 'Mio',
+      'Tsubasa', 'Yui', 'Yoshiko', 'Takumi', 'Kazuki', 'Natsu', 'Makoto', 'Aya', 'Ren', 'Ayumi',
+      'Yusuke', 'Mari', 'Keiko', 'Ayame', 'Ryu', 'Asuka', 'Haruka', 'Misaki', 'Yumi', 'Shinji',
+      'Nana', 'Yusaku', 'Minako', 'Kazuya', 'Chihiro', 'Yuta', 'Satoshi', 'Sakiko', 'Taro', 'Yoshio',
+      'Aki', 'Arisa', 'Kenta', 'Miki', 'Tetsuya', 'Mayu', 'Ryota', 'Yuko', 'Kaori', 'Jun',
+      'Eri', 'Toshiro', 'Yoshi', 'Yoshiko', 'Sho', 'Natsumi', 'Koki', 'Nori', 'Ryoko', 'Daisuke',
+      'Yukiko', 'Daichi', 'Kanako', 'Ryoko', 'Shota', 'Narumi', 'Taichi', 'Ayano', 'Yuichi', 'Rie',
+      'Masaru', 'Aina', 'Haruna', 'Kei', 'Mariko', 'Toshi', 'Noriko', 'Fumiko', 'Yui', 'Aoi',
+      'Takako', 'Shiori', 'Takao', 'Yukari', 'Kyoko', 'Seiji', 'Ryoko', 'Koji', 'Yoshimi', 'Rika',
+      'Hikaru', 'Mitsuru', 'Asami', 'Tomoko', 'Hiroko', 'Noboru', 'Yoko', 'Shunsuke', 'Shizuka', 'Atsuko',
+      'Hideki', 'Kazumi', 'Ryuta', 'Asami', 'Tsuyoshi', 'Kiyomi', 'Kotaro', 'Sayuri', 'Reina', 'Hayato',
+      'Sakiko', 'Yoshie', 'Hitomi', 'Satoshi', 'Kyosuke', 'Erika', 'Yuki', 'Naoko', 'Hideaki', 'Saki',
+      'Yasuhiro', 'Maki', 'Yuko', 'Yoshihiro', 'Momoko', 'Shuichi', 'Natsuko', 'Takayuki', 'Saori', 'Ryo',
+      'Nao', 'Tadashi', 'Megumi', 'Kazuhiro', 'Kaede', 'Kiyoko', 'Tetsuo', 'Yukie', 'Tomoya', 'Nami',
+      'Tomomi', 'Junko', 'Koichi', 'Kazuko', 'Mitsuko', 'Asuka', 'Kazuo', 'Yumiko', 'Mika', 'Mitsuko',
+      'Ryoichi', 'Nanami', 'Kazuo', 'Midori', 'Hiroshi', 'Sachiko', 'Yukino', 'Kohei', 'Kazue', 'Rin',
+      'Koharu', 'Akane', 'Yumi', 'Hinata', 'Kensuke', 'Asumi', 'Takayuki', 'Chie', 'Kojiro', 'Hina',
+      'Satoshi', 'Kumiko', 'Koichi', 'Shoko', 'Takeshi', 'Miharu', 'Ryohei', 'Michiko', 'Shohei', 'Yasuko',
+      'Nobuko', 'Miu', 'Shingo', 'Reiko', 'Takashi', 'Ayaka', 'Hideyuki', 'Sakura', 'Yoshihiko', 'Mao',
+      'Kazuki', 'Yuriko', 'Takuma', 'Yasushi', 'Aya', 'Ryosuke', 'Nanako', 'Koji', 'Ryoko', 'Asuka',
+      'Tetsuya', 'Chinatsu', 'Atsushi', 'Minami', 'Takako', 'Shun', 'Kaoru', 'Ryosuke', 'Akihiko', 'Hikari'
+      ];
+
+    
+    function generarFechaAleatoria() {
+        var año = Math.floor(Math.random() * (2022 - 2000 + 1)) + 2000;
+        var mes = Math.floor(Math.random() * 12) + 1;
+        var dia = Math.floor(Math.random() * 31) + 1;
+        var hora = Math.floor(Math.random() * 24);
+        var minuto = Math.floor(Math.random() * 60);
+        var segundo = Math.floor(Math.random() * 60);
+
+        var fechaAleatoria = new Date(año, mes - 1, dia, hora, minuto, segundo);
+
+        var fechaFormateada = fechaAleatoria.toISOString().split("T")[0];
+
+        return fechaFormateada;
+      }
+
+
+
+
+    function generarAlumnos() {
+
+      var numeroVentas = document.getElementById("NumRegistros").value;
+      var select = document.getElementById("usuario");
+      var opcion = select.options[select.selectedIndex].value;
+      var salida = ` CREATE DATABASE IF NOT EXISTS sistema_escolar;<br> USE sistema_escolar;<br> CREATE TABLE IF NOT EXISTS ${opcion} (<br>  expediente INT(11) UNSIGNED NOT NULL UNIQUE,<br>  apellido1 VARCHAR(255) NOT NULL,<br>  apellido2 VARCHAR(255),<br>  nombre VARCHAR(255) NOT NULL,<br>  correo_institucional VARCHAR(255) NOT NULL UNIQUE<br>, contrasena VARCHAR(100), fecha_nacimiento DATE);<br> INSERT INTO ${opcion} (expediente, apellido1, apellido2, nombre, correo_institucional, contrasena, fecha_nacimiento) VALUES <br>`;
+      var matriculaAlumno = 222220993;
+      var matriculaAcademico = 777700020;
+      var matriculaAdmin = 999900020;
+
+      switch (opcion) {
+      case "alumno":
+      for (let i = 0; i < numeroVentas; i++) {
+        salida += ` (${matriculaAlumno}, '${apellidos[Math.floor(Math.random() * 199)]}', 
+        '${apellidosPortugueses[Math.floor(Math.random() * 199)]}', '${primerNombre[Math.floor(Math.random() * 194)]} 
+        ${segundoNombre[Math.floor(Math.random() * 199)]}', '${matriculaAlumno++}@unison.mx', MD5('123'), '`+ generarFechaAleatoria()+`' ),`;
+
+        if (i == numeroVentas-1) {
+          salida = salida.slice(0, -1) + ";"; 
+        }
+
+        salida += " <br>";
+      }
+      break;
+
+      case "academicos":
+        for (let i = 0; i < numeroVentas; i++) {
+          salida += ` (${matriculaAcademico}, '${apellidos[Math.floor(Math.random() * 199)]}', 
+          '${apellidosPortugueses[Math.floor(Math.random() * 199)]}', '${primerNombre[Math.floor(Math.random() * 194)]} 
+          ${segundoNombre[Math.floor(Math.random() * 199)]}', '${matriculaAcademico++}@acadunison.mx', MD5('123'), '`+ generarFechaAleatoria()+`' ),`;
+
+          if (i == numeroVentas-1) {
+            salida = salida.slice(0, -1) + ";";
+          }
+
+          salida += " <br>";
+        }
+      break;
+
+      case "administrativos":
+        for (let i = 0; i < numeroVentas; i++) {
+          salida += ` (${matriculaAdmin}, '${apellidos[Math.floor(Math.random() * 199)]}', 
+          '${apellidosPortugueses[Math.floor(Math.random() * 199)]}', '${primerNombre[Math.floor(Math.random() * 194)]} 
+          ${segundoNombre[Math.floor(Math.random() * 199)]}', '${matriculaAdmin++}@adminunison.mx', MD5('123'), '`+ generarFechaAleatoria()+`' ),`;
+
+          if (i == numeroVentas-1) {
+            salida = salida.slice(0, -1) + ";"; 
+          }
+
+          salida += " <br>";
+        }
+      break;
+
+    }
+
+      document.getElementById("salida").innerHTML = salida;
+    }
+
+
+    function descargarSQL() {
+      var contenidoSQL = document.getElementById("salida").innerText;
+      var blob = new Blob([contenidoSQL], { type: "text/plain" });
+      var url = window.URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "alumnos.sql";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    }
+
+
+
+
+  </script>
+</head>
+
+<body>
+
+  Número de alumnos/academicos/administrativos a generar:
+  <input type="number" id="NumRegistros" required/>
+  <select name="opcion" id="usuario">
+    <option value="alumno">
+      Alumnos
+    </option>
+
+    <option value="academicos">
+      Académicos
+    </option>
+
+    <option value="administrativos">
+    Administrativos
+    </option></select>
+  <br>
+  <input type="button" value="Generar en SQL" onclick="generarAlumnos()" />
+  <input type="button" value="Descargar archivo SQL" onclick="descargarSQL()">
+  <p id="salida"></p>
+
+
+</body>
+
+</html>
